@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6" xmlns:ng="http://angularjs.org"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" xmlns:ng="http://angularjs.org"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" xmlns:ng="http://angularjs.org"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" xmlns:ng="http://angularjs.org"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="" xmlns:ng="http://angularjs.org"><!--<![endif]-->
+<head>
+	
+	
+    <base href="https://sharingculture-publicsector.s3.ap-southeast-2.amazonaws.com/test-your-tired-self-2/">
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=0">
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title></title>
+	<meta name="description" content="">
+	
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content=""/>
+
+    <!---->
+
+<!--	<link rel="stylesheet" href="./lib/bootstrap/docs/assets/css/bootstrap.css?a503680494d9927b">-->
+	<link rel="stylesheet" href="./css/app.css?a2c355fd399f77f1">
+
+	<!--[if lte IE 8]>
+		<script>document.createElement('debugger');</script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!--[if IE 8]> <script src="lib/excanvas.js?c1bb7af6a374cfab"></script><![endif]-->
+		
+</head>
+<body itemscope itemtype="http://schema.org/Thing" ng-controller="LayoutController" ng-class="bodyClass">
+
+	<div id="fb-root"></div>
+	<div id="floodlight-tracking" style="height:0px; border:none;"></div>
+	<div class="mobile-social-menu">
+		<ul>
+			<li class="title"><a href="#" class="close-menu">Share <span>X</span></a></li>
+            <li><a class="fb addthis_button_facebook" addthis:description="Find out how tired you might be with this interactive test. You’ll also learn ways to avoid driving tired.">Facebook</a></li>
+			<li><a class="twitter addthis_button_twitter" addthis:url="http://bit.ly/1aWcfzA" addthis:title="Feeling tired? Test your tired self with this interactive test. You’ll also learn ways to avoid driving tired.">Twitter</a></li>
+			<li><a class="google-plus addthis_button_google_plusone_share" g:plusone:size='small' g:plusone:count='false' addthis:description="Find out how tired you might be with this interactive test. You’ll also learn ways to avoid driving tired.">Google+</a></li>
+			<li><a class="linked-in addthis_button_linkedin" addthis:description="Find out how tired you might be with this interactive test. You’ll also learn ways to avoid driving tired.">LinkedIn</a></li>
+		</ul>
+	</div>
+	<div class="App" ng-class="{ 'active-left': offCanvasOpen === 'left', 'active-right': offCanvasOpen === 'right' }">
+		<main class="App__Main page-animation-container">
+
+			<aside class="App__Off-canvas--left main-site-menu">
+				<div ng-include="'./views/nav.html'"></div>
+			</aside>
+			<div class="page-controller">
+				<div class="Main__activate-Off-canvas--left">
+					<div class="Menu--trigger-nav">
+						<button class="toggle-site-menu Menu__item anti-button">
+							<i class="icon-hamburger"></i>
+						</button>
+						<span class="Menu__item">
+							<a href="https://www.rsc.wa.gov.au/" target="_blank"
+							   data-ng-click=""
+							   data-category="Outbound"
+							   data-action="Click"
+							   data-label="TFNSW Website"
+							   class="event-tracking"
+								>
+								<h1 class="main-site-logo">Road Safety Commission WA</h1>
+							</a>
+						</span>
+					</div>
+				</div>
+				<div class="main-social-menu">
+					<div class="menu-include" ng-include="'./views/social.html'"></div>
+					<button class="anti-button">
+						Share <i class="icon-down-arrow"></i>
+					</button>
+				</div>
+
+				<div class="Main__pagination" ng-controller="PageIndicatorController">
+					<div ng-include="'./views/pagination.html'"></div>
+				</div>
+	            <div id="page-cont" data-ng-view class="page-view" ng-class="pageAnimationClass"></div>
+            </div>
+		</main>
+	</div>
+
+<!--    // libraries and core scripts -->
+<!--	<script type="text/javascript" src="./js/app.libs.js?d4d3a16cf568c225"></script>-->
+<!--	<script type="text/javascript" src="./js/app.main.js?2d39a7dad5e8ba9e"></script>-->
+
+
+<!--   // manually bootstrap the application -->
+<!--	<script type="text/javascript" src="./js/app.init.js?3bba918915dfeca9"></script>-->
+
+    <script type="text/javascript" src="./js/bundle.js?2d39a7dasdf"></script>
+
+    <script type="text/javascript">
+        var addthis_config = {
+            "data_track_addressbar": false,
+            "data_track_clickback": false,
+            email_template: "New_Template",
+            ui_email_note: "I just took an interactive test to see how tired I might be. You should try it out, you may be surprised. You’ll also get a load of helpful tips to avoid driving tired."
+        };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a64eff25c5eb75"></script>
+<!--	<script type="text/javascript" src="/lib/jqueryRotate.js?454575adfcfd293c"></script>-->
+</body>
+</html>
